@@ -1,0 +1,13 @@
+---
+import Layout from '../layouts/Layout.astro';
+import { AuthForm } from '../components/AuthForm';
+import { Toaster } from 'react-hot-toast';
+---
+
+<Layout title="Registro">
+	<div class="max-w-md mx-auto bg-white p-8 rounded-lg shadow-md">
+		<h1 class="text-2xl font-bold text-gray-900 mb-6 text-center">Crear Cuenta</h1>
+		<AuthForm client:load type="register" />
+	</div>
+	<Toaster client:load />
+</Layout>

@@ -1,0 +1,14 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import { NewsManagement } from '../../components/news/NewsManagement';
+import { ProtectedRoute } from '../../components/ProtectedRoute';
+import { ROLES } from '../../components/ProtectedRoute';
+import { Toaster } from 'react-hot-toast';
+---
+
+<Layout title="Gestión de Noticias">
+  <ProtectedRoute allowedRoles={[ROLES.ADMIN, ROLES.EDITOR]} client:load>
+    <NewsManagement client:load />
+  </ProtectedRoute>
+  <Toaster client:load />
+</Layout>

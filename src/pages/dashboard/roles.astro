@@ -1,0 +1,14 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import { RoleManagement } from '../../components/roles/RoleManagement';
+import { ProtectedRoute } from '../../components/ProtectedRoute';
+import { ROLES } from '../../components/ProtectedRoute';
+import { Toaster } from 'react-hot-toast';
+---
+
+<Layout title="Gestión de Roles">
+  <ProtectedRoute allowedRoles={[ROLES.ADMIN]} client:load>
+    <RoleManagement client:load />
+  </ProtectedRoute>
+  <Toaster client:load />
+</Layout>

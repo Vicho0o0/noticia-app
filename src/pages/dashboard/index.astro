@@ -1,0 +1,10 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import { DashboardRouter } from '../../components/DashboardRouter';
+import { Toaster } from 'react-hot-toast';
+---
+
+<Layout title="Dashboard">
+  <DashboardRouter client:load />
+  <Toaster client:load />
+</Layout>

@@ -1,0 +1,14 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import { TagManagement } from '../../components/tags/TagManagement';
+import { ProtectedRoute } from '../../components/ProtectedRoute';
+import { ROLES } from '../../components/ProtectedRoute';
+import { Toaster } from 'react-hot-toast';
+---
+
+<Layout title="Gestión de Etiquetas">
+  <ProtectedRoute allowedRoles={[ROLES.ADMIN]} client:load>
+    <TagManagement client:load />
+  </ProtectedRoute>
+  <Toaster client:load />
+</Layout>
