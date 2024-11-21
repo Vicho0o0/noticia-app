@@ -114,8 +114,8 @@ export const NewsModal: React.FC<NewsModalProps> = ({
         const formData = new FormData();
         formData.append('file', imagen);
         
-        // Aquí deberías implementar tu propia lógica para subir la imagen
-        // Por ahora, usaremos una ruta estática
+        // Aquí va la lógica para subir la imagen
+        // Por ahora, usaremos una ruta estática (sin programar)
         imagen_url = `/img_noticias/${fileName}`;
       }
 
